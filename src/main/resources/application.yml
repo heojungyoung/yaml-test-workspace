@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+val:
+  text: "propValue"
+
+val2:
+  arr:
+    [1, 2, 3]
+  arr2:
+    - 1
+    - 2
+    - 3
+  arr3:
+    - a: 123
+      b: 456
+      c:
+        - 789
+    - a: 111
+      b: 222
+      c:
+        - 333
+        - 444

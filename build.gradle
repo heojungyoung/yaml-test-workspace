@@ -2,6 +2,8 @@ plugins {
     id 'org.springframework.boot' version '2.3.3.RELEASE'
     id 'io.spring.dependency-management' version '1.0.10.RELEASE'
     id 'java'
+    id 'org.sonarqube' version '3.5.0.2730'
+    id 'jacoco'
 }
 
 group = 'com.example'
@@ -31,7 +33,16 @@ test {
     useJUnitPlatform()
 }
 
-//@SpringBootApplication이 선언된 MainClass 설정
+jacoco {
+    toolVersion = '0.8.5'
+}
+
+sonar {
+    properties {
+        property "sonar.projectKey", "sonartest"
+    }
+}
+
 bootJar {
     mainClassName = 'com.example.property.PropertyApplication'
 }
@@ -41,3 +52,4 @@ bootRun {
     String activeProfile = System.properties['spring.profiles.active']
     systemProperty "spring.profiles.active", activeProfile
 }
+

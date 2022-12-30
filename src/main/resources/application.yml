@@ -21,3 +21,22 @@ val2:
       c:
         - 333
         - 444
+
+serial:
+  default:
+    ver: "a001,a002,a003"
+  number: |
+    1:bbb333
+    2:fff333
+    3:fsf666,kkk77
+    4:mmmmm
+    5:gggggg
+    6:rrrrrrr,nnnnnn
+    7:llllll
+
+sequence:
+  default:
+    ver: "a001,a003,a0078"
+  number: |-
+    1:yyyyyy
+    2:vvvvvv

@@ -1,9 +1,13 @@
 package com.example.property;
 
+import com.example.check.ServiceIds;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import java.util.List;
+
 
 @SpringBootTest
 class PropertyApplicationTests {
@@ -13,6 +17,18 @@ class PropertyApplicationTests {
 
     @Autowired
     private Prop prop;
+
+    @Autowired(required = false)
+    private ServiceIds serviceIds;
+
+    @Value("${serial.number}")
+    private String list;
+
+    @Value("${sequence.number}")
+    private List<String> plist;
+
+    @Value("${sequence.default.ver}")
+    private String ver;
 
     @Test
     void contextLoads() {
@@ -25,6 +41,14 @@ class PropertyApplicationTests {
         System.out.println("prop arr3[1].a : " + prop.getArr3().get(1).getA());
         System.out.println("prop arr3[1].b : " + prop.getArr3().get(1).getB());
         System.out.println("prop arr3[1].c : " + prop.getArr3().get(1).getC());
+
+        System.out.println("list : " + list);
+
+        System.out.println("serviceIds arr3[1].c : " + plist);
+
+        System.out.println("list : " + ver);
+
+
     }
 
 }

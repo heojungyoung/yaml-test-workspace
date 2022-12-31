@@ -7,8 +7,6 @@ import org.springframework.test.context.ContextConfiguration;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 
 // @ContextConfiguration
 @SpringBootTest
@@ -38,13 +36,9 @@ class PropertyApplicationTests {
 
         System.out.println("list : " + ver);
 
-        String result = "ok";
-
-        if(list.isEmpty())
-            result = "fail";
 
 
-        assertEquals("ok", result);
+
 
 
     }

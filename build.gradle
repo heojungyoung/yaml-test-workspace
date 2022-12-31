@@ -21,7 +21,7 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    compileOnly 'org.projectlombok:lombok'
+
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
@@ -29,6 +29,14 @@ dependencies {
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
     testAnnotationProcessor 'org.projectlombok:lombok'
 
+
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.7.2'
+
+    testImplementation group: 'org.junit.platform', name: 'junit-platform-launcher', version: '1.7.2'
+
+    testRuntimeOnly "org.junit.platform:junit-platform-commons:1.9.0"
+
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.7.2'
 
 }
 

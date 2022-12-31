@@ -8,8 +8,7 @@ import java.util.List;
 
 import static org.springframework.test.util.AssertionErrors.assertEquals;
 
-
-@SpringBootTest
+@SpringBootTest(classes = PropertyApplication.class)
 class PropertyApplicationTests {
 
     @Value("${val.text}")

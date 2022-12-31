@@ -29,7 +29,8 @@ class PropertyApplicationTests {
     private String ver;
 
     @Test
-    void contextLoads() {
+    void propTest(){
+
         System.out.println("val : " + val);
       /*  System.out.println("prop arr : " + prop.getArr().toString());
         System.out.println("prop arr2 : " + prop.getArr2().toString());
@@ -46,9 +47,9 @@ class PropertyApplicationTests {
 
         System.out.println("list : " + ver);
 
-
-
-
     }
+
+
+
 
 }

@@ -7,7 +7,8 @@ import org.springframework.test.context.ContextConfiguration;
 
 import java.util.List;
 
-import static org.springframework.test.util.AssertionErrors.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 // @ContextConfiguration
 @SpringBootTest
@@ -36,6 +37,15 @@ class PropertyApplicationTests {
         System.out.println("serviceIds arr3[1].c : " + plist);
 
         System.out.println("list : " + ver);
+
+        String result = "ok";
+
+        if(list.isEmpty())
+            result = "fail";
+
+
+        assertEquals("ok", result);
+
 
     }
 

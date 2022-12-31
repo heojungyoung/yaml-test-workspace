@@ -8,8 +8,8 @@ import org.springframework.test.context.ContextConfiguration;
 import java.util.List;
 
 
-// @ContextConfiguration
-// @SpringBootTest
+@ContextConfiguration
+@SpringBootTest
 class PropertyApplicationTests {
 
     @Value("${val.text}")

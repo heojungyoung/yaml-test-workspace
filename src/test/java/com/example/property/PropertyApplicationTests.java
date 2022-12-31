@@ -10,7 +10,7 @@ import java.util.List;
 import static org.springframework.test.util.AssertionErrors.assertEquals;
 
 @ContextConfiguration
-@SpringBootTest(classes = PropertyApplication.class)
+@SpringBootTest
 class PropertyApplicationTests {
 
     @Value("${val.text}")

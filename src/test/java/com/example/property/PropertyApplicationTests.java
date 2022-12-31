@@ -6,6 +6,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
 
+import static org.springframework.test.util.AssertionErrors.assertEquals;
+
 
 @SpringBootTest
 class PropertyApplicationTests {
@@ -42,6 +44,8 @@ class PropertyApplicationTests {
         System.out.println("serviceIds arr3[1].c : " + plist);
 
         System.out.println("list : " + ver);
+
+
 
 
     }

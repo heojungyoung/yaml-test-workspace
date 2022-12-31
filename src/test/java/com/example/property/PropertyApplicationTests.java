@@ -9,7 +9,7 @@ import java.util.List;
 
 
 // @ContextConfiguration
-@SpringBootTest
+// @SpringBootTest
 class PropertyApplicationTests {
 
     @Value("${val.text}")

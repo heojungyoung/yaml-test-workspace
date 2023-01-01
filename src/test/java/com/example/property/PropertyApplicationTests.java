@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
-
 import java.util.List;
 
 
@@ -36,14 +35,16 @@ class PropertyApplicationTests {
 
         System.out.println("list : " + ver);
 
+        /* 암호화할 텍스트 */
+        String text = "Hello, Java";
 
+        /* SHA256 암호화 */
+        String encryptSHA256 = sha256.testSHA256(text);
 
-
-
+        /* SHA256 암호화 결과 */
+        System.out.println("SHA256 암호화 요청 텍스트 : " + text);
+        System.out.println("SHA256 암호화 완료 텍스트 : " + encryptSHA256);
 
     }
-
-
-
 
 }

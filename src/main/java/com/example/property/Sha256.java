@@ -8,7 +8,7 @@ public class Sha256 {
 
     private Sha256(){}
 
-    public static String testSHA256(String pwd) {
+    public static String testSHA256(String pwd) throws NoSuchAlgorithmException {
         try{
 
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
@@ -26,7 +26,8 @@ public class Sha256 {
             return hexString.toString();
 
         } catch(NoSuchAlgorithmException ex){
-            throw new RuntimeException(ex);
+            throw new NoSuchAlgorithmException(ex);
+
         }
     }
 }

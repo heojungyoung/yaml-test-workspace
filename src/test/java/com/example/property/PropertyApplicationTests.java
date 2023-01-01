@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
+
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 
@@ -24,7 +26,7 @@ class PropertyApplicationTests {
     private String ver;
 
     @Test
-    public void propTest(){
+    public void propTest() throws NoSuchAlgorithmException {
 
         System.out.println("val : " + val);
 

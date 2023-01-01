@@ -3,7 +3,7 @@ package com.example.property;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 
-public class sha256 {
+public class Sha256 {
     public static String testSHA256(String pwd) {
         try{
 

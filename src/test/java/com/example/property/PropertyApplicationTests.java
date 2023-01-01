@@ -39,7 +39,7 @@ class PropertyApplicationTests {
         String text = "Hello, Java";
 
         /* SHA256 암호화 */
-        String encryptSHA256 = sha256.testSHA256(text);
+        String encryptSHA256 = Sha256.testSHA256(text);
 
         /* SHA256 암호화 결과 */
         System.out.println("SHA256 암호화 요청 텍스트 : " + text);

@@ -42,31 +42,15 @@ dependencies {
 
 test {
     useJUnitPlatform()
+    jacoco {
+        destinationFile = file("$buildDir/jacoco/jacoco.exec")
+    }
     finalizedBy jacocoTestReport
 }
 
 jacoco {
     toolVersion = '0.8.5'
-
 }
-
-sonar {
-    properties {
-        property "sonar.projectKey", "sonartest"
-    }
-}
-
-bootJar {
-    mainClassName = 'com.example.property.PropertyApplication'
-}
-
-//profiles 설정
-bootRun {
-    String activeProfile = System.properties['spring.profiles.active']
-    systemProperty "spring.profiles.active", activeProfile
-}
-
-
 
 
 jacocoTestReport {
@@ -101,4 +85,20 @@ jacocoTestCoverageVerification {
             }
         }
     }
+}
+
+sonar {
+    properties {
+        property "sonar.projectKey", "sonartest"
+    }
+}
+
+bootJar {
+    mainClassName = 'com.example.property.PropertyApplication'
+}
+
+//profiles 설정
+bootRun {
+    String activeProfile = System.properties['spring.profiles.active']
+    systemProperty "spring.profiles.active", activeProfile
 }

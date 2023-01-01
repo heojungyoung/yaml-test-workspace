@@ -2,8 +2,12 @@ package com.example.property;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 public class Sha256 {
+
+    private Sha256(){}
+
     public static String testSHA256(String pwd) {
         try{
 
@@ -21,7 +25,7 @@ public class Sha256 {
             //출력
             return hexString.toString();
 
-        } catch(Exception ex){
+        } catch(NoSuchAlgorithmException ex){
             throw new RuntimeException(ex);
         }
     }

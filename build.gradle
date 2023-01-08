@@ -49,7 +49,7 @@ test {
 }
 
 jacoco {
-    toolVersion = '0.8.5'
+    toolVersion = '0.8.7.202012040301'
 }
 
 
@@ -63,7 +63,7 @@ jacocoTestReport {
         html.destination file("src/jacoco/jacoco.html")
         xml.destination file("src/jacoco/jacoco.xml")
     }
-    finalizedBy 'jacocoTestCoverageVerification'
+    finalizedBy jacocoTestCoverageVerification
 }
 
 jacocoTestCoverageVerification {

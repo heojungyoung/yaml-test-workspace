@@ -25,6 +25,13 @@ class PropertyApplicationTests {
     @Value("${sequence.default.ver}")
     private String ver;
 
+    private static String ttt;
+
+    @Value("${server.port}")
+    private void aaa(String ggg){
+        PropertyApplicationTests.ttt = ggg;
+    }
+
     @Test
     public void propTest() throws NoSuchAlgorithmException {
 
@@ -46,6 +53,8 @@ class PropertyApplicationTests {
         /* SHA256 암호화 결과 */
         System.out.println("SHA256 암호화 요청 텍스트 : " + text);
         System.out.println("SHA256 암호화 완료 텍스트 : " + encryptSHA256);
+
+        System.out.println(PropertyApplicationTests.ttt);
 
     }
 
